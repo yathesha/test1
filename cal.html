@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    input[type=text] {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 20px 26em;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 5px 10px 18px #888888
+}
+.slidecontainer {
+  width: 50%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #0a0808;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin-left: 15em;
+  
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #fcc109;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #fcc109;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h1 style="margin-left: 12em;">Calculator Range Slider</h1>
+<h2 style="margin-left: 19em;">Display your status.</h2>
+
+<div class="slidecontainer">
+  <input type="range" min="0" max="100000" class="slider" id="myRange">
+  <p style="margin-left:30em;">Value: <span id="demo"></span></p>
+</div>
+<div class="slidecontainer">
+  <input type="range" min="0" max="100000" class="slider" id="myRange1">
+  <p style="margin-left:30em;">Value: <span id="demo1"></span></p>
+</div>
+<div class="slidecontainer">
+  <input type="range" min="0" max="100000" class="slider" id="myRange2">
+  <p style="margin-left:30em;">Value: <span id="demo2"></span></p>
+</div>
+<div class="slidecontainer">
+  <input type="range" min="0" max="100000" class="slider" id="myRange3">
+  <p style="margin-left:30em;">Value: <span id="demo3"></span></p>
+</div>
+<div class="slidecontainer">
+  <input type="range" min="0" max="100000" class="slider" id="myRange4">
+  <p style="margin-left:30em;">Value: <span id="demo4"></span></p>
+</div>
+ <p style="margin-left:30em;" name="total">Value: <span id="total"></span></p>
+<div>
+    <input type="text" name="total" id="total" placeholder="Total Amount.....">
+</div>
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+var slider1 = document.getElementById("myRange1");
+var output1 = document.getElementById("demo1");
+output1.innerHTML = slider1.value;
+
+slider1.oninput = function() {
+  output1.innerHTML = this.value;
+}
+
+
+var slider2 = document.getElementById("myRange2");
+var output2 = document.getElementById("demo2");
+output2.innerHTML = slider2.value;
+
+slider2.oninput = function() {
+  output2.innerHTML = this.value;
+}
+
+var slider3 = document.getElementById("myRange3");
+var output3 = document.getElementById("demo3");
+output3.innerHTML = slider3.value;
+
+slider3.oninput = function() {
+  output3.innerHTML = this.value;
+}
+var slider4 = document.getElementById("myRange4");
+var output4 = document.getElementById("demo4");
+output4.innerHTML = slider4.value;
+
+slider4.oninput = function() {
+  output4.innerHTML = this.value;
+
+}
+
+ var total = (demo+demo1+demo2+demo3+demo4) ;
+
+ var x=parseInt('slider')
+ var y=parseInt('slider1')
+ var z=parseInt('slider2')
+ var  a=parseInt('slider3')   
+var b=parseInt('slider4')
+
+ var total =x+y+z+a+b
+ document.getElementById("total").innerHTML = "Grandtotal = " + parseInt('total');
+
+
+
+</script>
+
+</body>
